@@ -19,6 +19,8 @@
 		0DD5575D214F9B20007ED779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD5575B214F9B20007ED779 /* LaunchScreen.storyboard */; };
 		0DD55768214F9B21007ED779 /* iGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD55767214F9B21007ED779 /* iGuideTests.swift */; };
 		0DD55773214F9B21007ED779 /* iGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD55772214F9B21007ED779 /* iGuideUITests.swift */; };
+		0DFEAE31215796FA00A8B0ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEAE30215796FA00A8B0ED /* SignInViewController.swift */; };
+		0DFEAE3321579B3800A8B0ED /* ProtectedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEAE3221579B3800A8B0ED /* ProtectedPageViewController.swift */; };
 		B5D4458AD737C9819EBE6BD6 /* Pods_iGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED50C011C992658E87876BF /* Pods_iGuideTests.framework */; };
 		C4F3010544B169EDEB4E6697 /* Pods_iGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DAAEA4FC71941C4803BF3F3 /* Pods_iGuideUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		0DD5576E214F9B21007ED779 /* iGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD55772214F9B21007ED779 /* iGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iGuideUITests.swift; sourceTree = "<group>"; };
 		0DD55774214F9B21007ED779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DFEAE30215796FA00A8B0ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0DFEAE3221579B3800A8B0ED /* ProtectedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedPageViewController.swift; sourceTree = "<group>"; };
 		4547A0244F68CFC2F1135966 /* Pods_iGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAAEA4FC71941C4803BF3F3 /* Pods_iGuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780CA28A476E06AA2244D8BC /* Pods-iGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGuideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iGuideTests/Pods-iGuideTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				0DD5575B214F9B20007ED779 /* LaunchScreen.storyboard */,
 				0DD5575E214F9B20007ED779 /* Info.plist */,
 				0D848660215650A7005C5C93 /* RegisterPageViewController.swift */,
+				0DFEAE30215796FA00A8B0ED /* SignInViewController.swift */,
+				0DFEAE3221579B3800A8B0ED /* ProtectedPageViewController.swift */,
 			);
 			path = iGuide;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 				0DD5574C214F9B20007ED779 /* Frameworks */,
 				0DD5574D214F9B20007ED779 /* Resources */,
 				FE2A476160508E6CFB67BD35 /* [CP] Embed Pods Frameworks */,
+				8F764513E541625685A1E0DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,15 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iGuideUITests-checkManifestLockResult.txt",
 			);
@@ -337,15 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iGuide-checkManifestLockResult.txt",
 			);
@@ -354,20 +353,34 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE23D71353366BAF5251CE57 /* [CP] Check Pods Manifest.lock */ = {
+		8F764513E541625685A1E0DF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iGuide/Pods-iGuide-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iGuide/Pods-iGuide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE23D71353366BAF5251CE57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iGuideTests-checkManifestLockResult.txt",
 			);
@@ -381,17 +394,19 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iGuide/Pods-iGuide-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -407,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFEAE31215796FA00A8B0ED /* SignInViewController.swift in Sources */,
 				0DD55755214F9B20007ED779 /* ViewController.swift in Sources */,
+				0DFEAE3321579B3800A8B0ED /* ProtectedPageViewController.swift in Sources */,
 				0DD55753214F9B20007ED779 /* AppDelegate.swift in Sources */,
 				0D848661215650A7005C5C93 /* RegisterPageViewController.swift in Sources */,
 			);

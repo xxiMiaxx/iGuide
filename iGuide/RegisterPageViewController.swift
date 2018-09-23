@@ -8,6 +8,9 @@
 
 import UIKit
 
+import Firebase
+import GoogleSignIn
+
 class RegisterPageViewController: UIViewController {
 
     @IBOutlet weak var userEmailTextFeild: UITextField!

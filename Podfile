@@ -9,6 +9,8 @@ target 'iGuide' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Firebase', '>= 2.5.1'
+	pod ‘Firebase/Auth’
+	pod ‘GoogleSignIn’
   # Pods for iGuide
 
   target 'iGuideTests' do
