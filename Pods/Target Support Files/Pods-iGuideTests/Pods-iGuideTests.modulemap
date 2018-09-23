@@ -1,0 +1,6 @@
+framework module Pods_iGuideTests {
+  umbrella header "Pods-iGuideTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

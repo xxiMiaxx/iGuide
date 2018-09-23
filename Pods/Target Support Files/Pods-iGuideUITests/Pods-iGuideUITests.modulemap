@@ -1,0 +1,6 @@
+framework module Pods_iGuideUITests {
+  umbrella header "Pods-iGuideUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
